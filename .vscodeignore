@@ -12,5 +12,6 @@ node_modules/**
 .github/**
 scratch/**
 tests/**
+test-cases/**
 jest.config.js
 *.vsix
