@@ -1,0 +1,98 @@
+{
+  "name": "organize-cargo-toml",
+  "displayName": "Organize Cargo.toml",
+  "description": "VSCode extension to organize and format Cargo.toml files",
+  "version": "0.1.0",
+  "publisher": "dev-layer",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "rust",
+    "cargo",
+    "toml",
+    "format",
+    "organize"
+  ],
+  "activationEvents": [
+    "onCommand:organize-cargo-toml.organize",
+    "onCommand:organize-cargo-toml.helloWorld",
+    "onLanguage:toml"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "organize-cargo-toml.organize",
+        "title": "Organize Cargo.toml",
+        "category": "organize-cargo-toml"
+      },
+      {
+        "command": "organize-cargo-toml.helloWorld",
+        "title": "Hello World",
+        "category": "organize-cargo-toml"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceExtname == .toml && resourceFilename =~ /Cargo\\.toml$/",
+          "command": "organize-cargo-toml.organize",
+          "group": "1_modification"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .toml && resourceFilename =~ /Cargo\\.toml$/",
+          "command": "organize-cargo-toml.organize",
+          "group": "1_modification"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Organize Cargo.toml",
+      "properties": {
+        "organize-cargo-toml.preserveComments": {
+          "type": "boolean",
+          "default": true,
+          "description": "Preserve comments when organizing"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.5.2",
+    "@types/vscode": "^1.87.0",
+    "@vscode/test-electron": "^2.3.8",
+    "@vscode/vsce": "^2.24.0",
+    "jest": "^30.1.3",
+    "ovsx": "^0.8.3",
+    "ts-jest": "^29.4.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "toml": "^3.0.0"
+  },
+  "author": "Ryan Guild",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanguild/organize-cargo-toml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanguild/organize-cargo-toml/issues"
+  },
+  "homepage": "https://github.com/ryanguild/organize-cargo-toml#readme"
+}

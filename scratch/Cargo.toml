@@ -1,0 +1,10 @@
+[package]
+authors = ["Test Author"]
+edition = "2021"
+name = "test-project"
+version = "0.1.0"
+
+[dependencies]
+serde = "1.0"
+tokio = { features = ["full"], version = "1.0" }
+clap = "4.0"

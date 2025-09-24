@@ -1,0 +1,22 @@
+# Test case 3: Unsorted with existing [package] section
+[package]
+version = "1.0.0"
+name = "existing-package"
+authors = ["Alice", "Bob"]
+edition = "2021"
+description = "Test with existing package section"
+license = "Apache-2.0"
+
+[dependencies]
+uuid = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+
+[features]
+serde = ["chrono/serde"]
+default = []
+
+[dev-dependencies]
+tempfile = "3.0"
+proptest = "1.0"
+

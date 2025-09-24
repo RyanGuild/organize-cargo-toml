@@ -1,0 +1,43 @@
+[package]
+authors = ["Jane Smith", "Bob Wilson"]
+description = "A complex Rust project"
+edition = "2021"
+license = "MIT"
+name = "complex-project"
+# Test case 2: Complex unsorted Cargo.toml with many sections
+version = "0.2.0"
+
+[bin]
+name = "main"
+path = "src/bin/main.rs"
+
+[build-dependencies]
+bindgen = "0.68"
+cc = "1.0"
+
+[dependencies]
+axum = { optional = true, version = "0.7" }
+clap = { features = ["derive"], version = "4.0" }
+futures = { optional = true, version = "0.3" }
+serde = { features = ["derive"], version = "1.0" }
+tokio = { features = ["rt-multi-thread"], optional = true, version = "1.0" }
+tower = { optional = true, version = "0.4" }
+
+[dev-dependencies]
+assert_cmd = "2.0"
+criterion = "0.5"
+tokio-test = "0.4"
+
+[features]
+async = ["tokio", "futures"]
+default = ["std"]
+std = []
+web = ["axum", "tower"]
+
+[lib]
+name = "complex_project"
+path = "src/lib.rs"
+
+[workspace]
+exclude = ["old-crate"]
+members = ["crate-a", "crate-b"]

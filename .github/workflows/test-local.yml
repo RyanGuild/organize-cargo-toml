@@ -1,0 +1,29 @@
+name: Local Test
+
+on: [push]
+
+jobs:
+  basic-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: List files
+      run: |
+        echo "=== Current directory ==="
+        pwd
+        ls -la
+        
+    - name: Check Node.js
+      run: |
+        echo "=== Node.js version ==="
+        node --version
+        npm --version
+        
+    - name: Install dependencies and build
+      run: |
+        echo "=== Installing dependencies ==="
+        npm install
+        echo "=== Building project ==="
+        npm run build
+        echo "=== Running tests ==="
+        npm test

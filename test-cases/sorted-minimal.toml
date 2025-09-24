@@ -1,0 +1,5 @@
+[package]
+edition = "2021"
+# Test case 5: Minimal unsorted project
+name = "minimal"
+version = "0.1.0"

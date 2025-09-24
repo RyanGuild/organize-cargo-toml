@@ -1,0 +1,15 @@
+[package]
+authors = ["John Doe <john@example.com>"]
+edition = "2021"
+name = "test-project"
+# Test case 1: Basic unsorted Cargo.toml with top-level package info
+version = "0.1.0"
+
+[dependencies]
+clap = "4.0"
+serde = "1.0"
+tokio = { features = ["full"], version = "1.0" }
+
+[dev-dependencies]
+assert_cmd = "2.0"
+criterion = "0.5"
