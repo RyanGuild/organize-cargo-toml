@@ -76,7 +76,7 @@
     "@types/node": "^24.5.2",
     "@types/vscode": "^1.87.0",
     "@vscode/test-electron": "^2.3.8",
-    "@vscode/vsce": "^2.24.0",
+    "@vscode/vsce": "^3.6.1",
     "jest": "^30.1.3",
     "ovsx": "^0.8.3",
     "ts-jest": "^29.4.4",
