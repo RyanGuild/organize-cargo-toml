@@ -1,5 +1,7 @@
 // Mock VSCode API for testing
-const mockFn = () => jest.fn();
+import { vi } from 'vitest';
+
+const mockFn = () => vi.fn();
 
 export const workspace = {
     getConfiguration: mockFn().mockReturnValue({

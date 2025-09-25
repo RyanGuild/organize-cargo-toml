@@ -1,3 +1,4 @@
+import { describe, test, beforeEach, expect } from 'vitest';
 import { CargoTomlOrganizer } from '../src/organizer';
 import * as fs from 'fs';
 import * as path from 'path';

@@ -65,22 +65,21 @@
     }
   },
   "scripts": {
-    "build": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
+    "build": "vite build",
+    "watch": "vite build --watch",
     "package": "vsce package",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.5.2",
     "@types/vscode": "^1.87.0",
     "@vscode/test-electron": "^2.3.8",
     "@vscode/vsce": "^3.6.1",
-    "jest": "^30.1.3",
-    "ovsx": "^0.8.3",
-    "ts-jest": "^29.4.4",
-    "typescript": "^5.8.3"
+    "ovsx": "^0.10.5",
+    "typescript": "^5.8.3",
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "toml": "^3.0.0"
