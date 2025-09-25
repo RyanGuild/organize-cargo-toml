@@ -2,9 +2,8 @@ name: Auto Version Bump
 
 on:
   workflow_run:
-    workflows: ["./ci.yml"]
-    types:
-      - completed
+    workflows: [.github/workflows/ci.yml]
+    types: [completed]
     branches: [ main ]
 
 jobs:
