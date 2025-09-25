@@ -2,7 +2,7 @@
   "name": "organize-cargo-toml",
   "displayName": "Organize Cargo.toml",
   "description": "VSCode extension to organize and format Cargo.toml files",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "publisher": "dev-layer",
   "engines": {
     "vscode": "^1.87.0"
